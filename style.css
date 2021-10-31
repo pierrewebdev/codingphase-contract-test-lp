@@ -10,6 +10,12 @@ p{
     line-height: 1.5;
 }
 
+h2{
+    color: #545268;
+    font-size: 40px;
+    font-weight: 400;
+}
+
 /*CSS for Navbar*/
 nav{
     display: grid;
@@ -162,11 +168,6 @@ nav .logo{
     margin: 100px 0 0
 }
 
-.more-about-kombucha h2{
-    color: #545268;
-    font-size: 40px;
-    font-weight: 400;
-}
 
 .more-about-kombucha p.centered-text{
     width: 90%;
@@ -261,6 +262,105 @@ nav .logo{
   background-origin:border-box;
   background-repeat:no-repeat;
 }
+
+/*CSS for popular this week section*/
+.popular-this-week{
+    margin: 100px 0;
+}
+
+.popular-this-week .title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-this-week .title-container .span-numbers span.colored{
+    color: #545268;
+    font-size: 35px;
+}
+
+.popular-this-week .title-container .span-numbers{
+    display: flex;
+    align-items: center;
+}
+
+.popular-this-week .title-container .span-numbers span{
+    font-size: 20px;
+    position: relative;
+    margin: 0 50px;
+    display:inline-block;
+    width: 39px;
+    color: rgba(172,178,193,255);
+}
+
+.popular-this-week .title-container .span-numbers span::after{
+    content: "";
+    width: 100%;
+    border-bottom: solid 1px #000;
+    position: absolute;
+    left: 150%;
+    top: 50%;
+    z-index: 1;
+}
+
+
+.popular-this-week .product-card-container{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.popular-this-week .product-card-container .product-card{
+    display:flex;
+    margin: 30px;
+    padding: 60px;
+    box-shadow: 3px 3px 9px 4px #EDEDED;
+}
+
+.popular-this-week .product-card-container .product-card .card-content{
+    width: 50%;
+}
+
+.popular-this-week .product-card-container .product-card .card-content h3{
+    text-transform: uppercase;
+}
+
+.popular-this-week .product-card-container .product-card .card-content p{
+    margin-bottom: 50px;
+}
+
+.popular-this-week .product-card-container .product-card .card-img-container {
+   width: 50%;
+   display: flex;
+   justify-content: center;
+}
+
+/*CSS for Stats section under products*/
+.stats-section{
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 50px 70px;
+}
+
+.stats-section .stat-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-section .stat-container img{
+    border-radius: 12px;
+    box-shadow: 3px 3px 11px 4px #e0dfdf;
+    object-fit: cover;
+}
+
+.stats-section .stat-container span{
+    color:  #545268;
+    font-size: 50px;
+}
+
+
 
 /*General CSS used throughout the landing page*/
 .orange-text{
