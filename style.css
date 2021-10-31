@@ -1,0 +1,287 @@
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 0 60px;
+    min-height: 100vh;
+    font-family: "Roboto";
+}
+
+p{
+    line-height: 1.5;
+}
+
+/*CSS for Navbar*/
+nav{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+
+nav .logo{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.nav-links ul, .nav-icons ul{
+    display: inline;
+    padding: 0;
+}
+
+.nav-links ul li, .nav-icons ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+}
+
+/*Putting an orange underline on the 1st link in the navbar*/
+.nav-links ul li:first-child a{
+    padding-bottom: 5px;
+    border-bottom: 2px rgba(254,83,49,255) solid;
+}
+
+/*CSS for Hero Section with button*/
+.hero-section{
+    margin: 60px;
+}
+
+.hero-container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.hero-container .kombucha-hero-img{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container .hero-content .above-hero-title{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.hero-container .hero-content .above-hero-title::after{
+    content: "-----------";
+    color: transparent;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+}
+
+.hero-container .hero-content .hero-title{
+    font-size: 60px;
+    font-weight: 300;
+    margin: 24px 0;
+    color: #545268;
+}
+
+.hero-container .hero-content .hero-title span:nth-child(2){
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+
+.hero-container .hero-content .hero-product-details{
+    width: 75%;
+}
+
+.hero-container .hero-content .hero-price{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.hero-container .hero-content .hero-price::after{
+    content: "";
+    border-bottom: 1px solid black;
+    display: block;
+    width: 30%;
+    margin: 25px 0 50px;
+}
+
+.hero-container .hero-content .product-features{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.hero-container .hero-content .product-features p.orange-text{
+    font-size: 20px;
+}
+
+/*CSS for partner logos underneath hero image section*/
+.partner-logo-container{
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*CSS for benefits section*/
+.benefits-section{
+    margin: 100px 0 0;
+}
+
+.benefits-section h2{
+    color: #545268;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.benefits-section .icon-box-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 50px 0;
+}
+
+.benefits-section .icon-box-container .icon-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits-section .icon-box-container .icon-box i{
+    font-size: 65px;
+    color: #474554;
+}
+
+.benefits-section .icon-box-container .icon-box-content{
+    text-align: center;
+    margin-top: 20px;
+    opacity: 80%;
+}
+
+.benefits-section .explore-more-container{
+    text-align: center;
+}
+
+/*CSS for more about kombucha section*/
+.more-about-kombucha{
+    margin: 100px 0 0
+}
+
+.more-about-kombucha h2{
+    color: #545268;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.more-about-kombucha p.centered-text{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.more-about-kombucha .two-col-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 150px;
+    /* grid-template-rows: auto auto auto; */
+    margin-top: 75px;
+}
+.more-about-kombucha .two-col-layout .kombucha-grid-content p{
+    margin-bottom: 50px;
+}
+
+.more-about-kombucha .two-col-layout .kombucha-grid-content span{
+    font-size: 25px;
+}
+
+.more-about-kombucha .two-col-layout .kombuca-grid-img-container{
+    margin: 0 auto;
+    padding: 0 100px;
+    position: relative;
+}
+
+.more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-one .watch-video{
+    position: absolute;
+    left:0;
+}
+
+.more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-two .watch-video{
+    position: absolute;
+}
+
+.more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-three .watch-video{
+    position: absolute;
+    left:0;
+}
+
+/*CSS to create border around kombucha images*/
+.image-border-one{
+    --thickness:  3px;
+    --color: rgba(255,83,49,255);
+    --width: 70px;
+    border: var(--thickness) solid transparent;
+    background:
+    /* linear-gradient(var(--color),var(--color)) top left,
+    linear-gradient(var(--color),var(--color)) top left, */
+    linear-gradient(var(--color),var(--color)) bottom left,
+    linear-gradient(var(--color),var(--color)) bottom left,
+    linear-gradient(var(--color),var(--color)) top right,
+    linear-gradient(var(--color),var(--color)) top right;
+    /* linear-gradient(var(--color),var(--color)) bottom right,
+    linear-gradient(var(--color),var(--color)) bottom right; */
+  background-size:var(--thickness) var(--width),var(--width) var(--thickness);
+  background-origin:border-box;
+  background-repeat:no-repeat;
+}
+
+.image-border-two{
+    --thickness:  3px;
+    --color: rgba(213,169,151,255);
+    --width: 70px;
+    border: var(--thickness) solid transparent;
+    background:
+    linear-gradient(var(--color),var(--color)) top left,
+    linear-gradient(var(--color),var(--color)) top left,
+    linear-gradient(var(--color),var(--color)) bottom right,
+    linear-gradient(var(--color),var(--color)) bottom right;
+  background-size:var(--thickness) var(--width),var(--width) var(--thickness);
+  background-origin:border-box;
+  background-repeat:no-repeat;
+}
+
+.image-border-three{
+    --thickness:  3px;
+    --color: rgba(114,112,131,255);
+    --width: 70px;
+    border: var(--thickness) solid transparent;
+    background:
+    /* linear-gradient(var(--color),var(--color)) top left,
+    linear-gradient(var(--color),var(--color)) top left, */
+    linear-gradient(var(--color),var(--color)) bottom left,
+    linear-gradient(var(--color),var(--color)) bottom left,
+    linear-gradient(var(--color),var(--color)) top right,
+    linear-gradient(var(--color),var(--color)) top right;
+    /* linear-gradient(var(--color),var(--color)) bottom right,
+    linear-gradient(var(--color),var(--color)) bottom right; */
+  background-size:var(--thickness) var(--width),var(--width) var(--thickness);
+  background-origin:border-box;
+  background-repeat:no-repeat;
+}
+
+/*General CSS used throughout the landing page*/
+.orange-text{
+    color: rgba(255,83,49,255);
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.cta-button{
+    padding: 10px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    background: rgba(84,82,104,255);
+    color: #fcfcfc;
+}
+
+.centered-text{
+    text-align: center;
+}
