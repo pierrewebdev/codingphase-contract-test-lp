@@ -1,7 +1,6 @@
 body{
     box-sizing: border-box;
     overflow-x: hidden;
-    padding: 0 60px;
     min-height: 100vh;
     font-family: "Roboto";
 }
@@ -16,6 +15,10 @@ h2{
     font-weight: 400;
 }
 
+section{
+    padding: 0 60px;
+}
+
 /*CSS for Navbar*/
 nav{
     display: grid;
@@ -26,6 +29,7 @@ nav .logo{
     text-transform: uppercase;
     font-weight: 600;
     margin-left: 50px;
+    font-size: 25px;
 }
 
 .nav-links ul, .nav-icons ul{
@@ -442,8 +446,45 @@ nav .logo{
     color: white;
 }
 
+/*CSS for Footer*/
+footer{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    background-color: #fafafa;
+    padding: 50px 70px;
+}
 
+footer ul li{
+    list-style-type: none;
+    margin: 8px 0;
+}
 
+footer ul li a{
+    text-decoration: none;
+    color:#adaeb2;
+}
+
+footer ul li.title{
+    font-size:22px;
+    margin-bottom: 15px;
+    color:#464646;
+}
+
+footer .logo{
+text-transform: uppercase;
+font-weight: 600;
+font-size: 25px;
+}
+
+footer .social-icons i{
+    background-color: #545268;
+    color:white;
+    border-radius: 50%;
+    margin: 0 8px;
+    width: 15px;
+    text-align: center;
+    padding: 10px;
+}
 
 
 /*General CSS used throughout the landing page*/
