@@ -317,7 +317,7 @@ nav .logo{
     display:flex;
     margin: 30px;
     padding: 60px;
-    box-shadow: 3px 3px 9px 4px #EDEDED;
+    box-shadow: 4px 4px 9px 4px #EDEDED;
 }
 
 .popular-this-week .product-card-container .product-card .card-content{
@@ -355,7 +355,7 @@ nav .logo{
 
 .stats-section .stat-container img{
     border-radius: 12px;
-    box-shadow: 3px 3px 11px 4px #e0dfdf;
+    box-shadow: 4px 4px 11px 4px #e0dfdf;
     object-fit: cover;
 }
 
@@ -392,8 +392,6 @@ nav .logo{
 }
 
 .testimonials-section .slider-container li.glide__slide h3::before {
-    /* font-family: "...";
-    content: "\f10d"; */
     content: "---";
     color: transparent;
     background: url(images/left-quote.png) no-repeat;
@@ -403,7 +401,6 @@ nav .logo{
     left: 20px;
     top: 50%;
     font-size: 50px;
-    /* color: #eaeaea; */
 }
 
 .testimonials-section .slider-container li.glide__slide * {
@@ -416,7 +413,7 @@ nav .logo{
 }
 
 .testimonials-section .slider-container li.glide__slide.glide__slide--active{
-    box-shadow: 3px 3px 11px 4px #e0dfdf;
+    box-shadow: 4px 4px 11px 4px #e0dfdf;
 }
 
 .testimonials-section .slider-container ul.glide__slides{
