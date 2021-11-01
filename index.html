@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--Font Awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="app.js"></script>
+
+    <!--CSS stylesheet for Glide JS-->
+    <link rel="stylesheet" href="glide.core.min.css">
 </head>
 <body>
     <nav>
@@ -204,5 +206,61 @@
             <p>Sales through-out the World</p>
         </div>
     </section>
+<!--This section will be a slider component from the Glider JS library -->
+    <section class="testimonials-section">
+        <h2 class = "centered-text">Testimonials</h2>
+        <p class="centered-text">Simple innate summer fat appear basket his entire joy</p>
+
+        <!--HTML from Glide JS Library-->
+        <div class="slider-container">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <!-- <i class="quote-icon fas fa-quote-left"></i> -->
+                        <img height = "100" weight = "100" src="images/happy woman.jpg" alt="">
+                        <div class="stars-container"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span></div>
+                        <h3>Robin Ayala Doe</h3>
+                        <p class = "centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at ullamcorper lectus. Maecenas at ullamcorper lectus</p>
+                    </li>
+                    <li class="glide__slide">
+                        <!-- <i class="quote-icon fas fa-quote-left"></i> -->
+                        <img height = "100" weight = "100" src="images/happy man 2.jpg" alt="">
+                        <div class="stars-container"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span></div>
+                        <h3>John De Marli</h3>
+                        <p class = "centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at ullamcorper lectus. Maecenas at ullamcorper lectus </p>
+                    </li>
+                    <li class="glide__slide">
+                        <!-- <i class="quote-icon fas fa-quote-left"></i> -->
+                        <img height = "100" weight = "100" src="images/happy man.jpg" alt="">
+                        <div class="stars-container"><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span></div>
+                        <h3>Rowhan Smith</h3>
+                        <p class = "centered-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at ullamcorper lectus. Maecenas at ullamcorper lectus </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button onClick = "moveLeft()" class="glide__arrow glide__arrow--left" ><i class="fas fa-chevron-left"></i></button>
+                <button onClick = "moveRight()" class="glide__arrow glide__arrow--right"><i class="fas fa-chevron-right"></i></button>
+              </div>
+        </div>
+    </section>
+
+  <!--Glide JS library script-->
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="app.js"></script>
 </body>
 </html>
