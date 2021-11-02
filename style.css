@@ -59,6 +59,45 @@ nav .logo{
     border-bottom: 2px rgba(254,83,49,255) solid;
 }
 
+/*CSS for nav Hamburger Menu*/
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: none;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+
 /*CSS for Hero Section with button*/
 .hero-section{
     margin: 60px;
@@ -473,6 +512,10 @@ footer .link-wrapper{
     padding: 50px 70px;
 }
 
+footer ul{
+    padding: 0;
+}
+
 footer .link-wrapper ul li{
     list-style-type: none;
     margin: 8px 0;
@@ -581,6 +624,34 @@ footer .social-icons i{
 }
 
 @media only screen and (max-width: 768px){
+    body{
+        padding:0;
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav.topnav{
+        display: block;
+        background-color: white;
+        margin: 10px;
+    }
+
+    nav.topnav .logo{
+        color: #000;
+        margin: 0;
+    }
+
+    nav.topnav a.icon{
+        background-color: white;
+        color: #000;
+    }
+
+    nav.topnav #myLinks a{
+        color: #000;
+    }
+
     section{
         padding: 0px 40px;
     }
@@ -784,5 +855,16 @@ footer .social-icons i{
 @media only screen and (max-width: 391px){
     section{
         padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .partner-logo-container{
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+
+    .hero-section .hero-container #hero-box-two h1{
+        font-size: 30px;
     }
 }

@@ -1,3 +1,12 @@
+function makeHamburgerMenuWork() {
+    var hamburgerLinks = document.getElementById("myLinks");
+    if (hamburgerLinks.style.display === "block") {
+      hamburgerLinks.style.display = "none";
+    } else {
+      hamburgerLinks.style.display = "block";
+    }
+  }
+
 function createGlider(){
     const glider = new Glide(".glide", {
         type: "slider",
