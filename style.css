@@ -582,6 +582,33 @@ footer .social-icons i{
         display: none;
     }
 
+    .hero-section .hero-container #hero-box-two{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section .hero-container #hero-box-two h1{
+        text-align: center;
+    }
+
+    .hero-container .hero-content .hero-price::after{
+        width: 100%;
+    }
+
+    .hero-section .hero-container .product-details{
+        width: 100%;
+    }
+
+
+    .hero-section .hero-container span{
+        display: inline-block;
+    }
+
+    .hero-section .hero-container p.hero-product-details{
+        width: 100%;
+    }
+
     .partner-logo-container{
         grid-template-columns: auto auto auto;
     }
@@ -603,6 +630,10 @@ footer .social-icons i{
     .stats-section{
         grid-template-columns: 1fr 1fr;
         row-gap: 20px;
+    }
+
+    li.glide__slide{
+        margin-left: 20px;
     }
 
     footer{

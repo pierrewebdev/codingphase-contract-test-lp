@@ -5,8 +5,7 @@ function createGlider(){
         perView: 3,
         breakpoints: {
             768: {
-                perView: 1,
-                focusAt: "center"
+                perView: 2
             }
         },
         focusAt: "center"
