@@ -1,8 +1,13 @@
+html{
+    overflow-x: hidden;
+}
+
 body{
     box-sizing: border-box;
     overflow-x: hidden;
     min-height: 100vh;
     font-family: "Roboto";
+    margin:0;
 }
 
 p{
@@ -122,11 +127,15 @@ nav .logo{
     font-size: 20px;
 }
 
+.hero-section .mobile-product-features{
+    display: none;
+}
+
 /*CSS for partner logos underneath hero image section*/
 .partner-logo-container{
     background-color: #fafafa;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 /*CSS for benefits section*/
@@ -273,8 +282,9 @@ nav .logo{
 }
 
 .popular-this-week .title-container{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: flex-start;
     align-items: center;
 }
 
@@ -286,6 +296,7 @@ nav .logo{
 .popular-this-week .title-container .span-numbers{
     display: flex;
     align-items: center;
+    justify-self: flex-end;
 }
 
 .popular-this-week .title-container .span-numbers span{
@@ -506,4 +517,83 @@ footer .social-icons i{
 
 .centered-text{
     text-align: center;
+}
+
+/*Media Queries for page*/
+
+@media only screen and (max-width:980px){
+    .hero-section{
+        margin: 60px 20px;
+        column-gap: 200px;
+    }
+
+    .hero-container .kombucha-hero-img img{
+        height: 400px;
+        width: auto;
+    }
+
+    .more-about-kombucha .two-col-layout{
+        column-gap: 35px;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container{
+        padding: 0 50px;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-one img.watch-video{
+        height: 70px;
+        width: auto;
+        left: -50px;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-two img.watch-video{
+        height: 70px;
+        width: auto;
+        right: -30px;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-three img.watch-video{
+        height: 70px;
+        width: auto;
+        left: -50px;
+    }
+
+    .popular-this-week .product-card-container{
+        flex-wrap: wrap;
+    }
+
+    .cta-button{
+        display: inline-block;
+        padding: 10px 25px;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .partner-logo-container{
+        grid-template-columns: auto auto auto;
+    }
+
+    .popular-this-week .title-container{
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+
+    .popular-this-week .title-container .span-numbers{
+        justify-self: center;
+    }
+
+    .stats-section{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    footer{
+        grid-template-columns: repeat(4,auto);
+        column-gap: 10px;
+    }
+
+    footer .empty-grid-item{
+        display: none;
+    }
 }
