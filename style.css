@@ -8,6 +8,7 @@ body{
     min-height: 100vh;
     font-family: "Roboto";
     margin:0;
+    padding-top: 20px;
 }
 
 p{
@@ -456,29 +457,42 @@ nav .logo{
 
 /*CSS for Footer*/
 footer{
+    background-color: #fafafa;
+    padding-bottom: 20px;
+}
+footer .copyright{
+    display: flex;
+    justify-content: center;
+    color:#adaeb2;
+}
+
+footer hr{
+    opacity: 0.2;
+}
+
+footer .link-wrapper{
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-    background-color: #fafafa;
     padding: 50px 70px;
 }
 
-footer ul li{
+footer .link-wrapper ul li{
     list-style-type: none;
     margin: 8px 0;
 }
 
-footer ul li a{
+footer .link-wrapper ul li a{
     text-decoration: none;
     color:#adaeb2;
 }
 
-footer ul li.title{
+footer .link-wrapper ul li.title{
     font-size:22px;
     margin-bottom: 15px;
     color:#464646;
 }
 
-footer .logo{
+footer .link-wrapper .logo{
 text-transform: uppercase;
 font-weight: 600;
 font-size: 25px;
@@ -636,12 +650,12 @@ footer .social-icons i{
         margin-left: 20px;
     }
 
-    footer{
-        grid-template-columns: repeat(4,auto);
+    footer .link-wrapper{
+        grid-template-columns: repeat(2,auto);
         column-gap: 10px;
     }
 
-    footer .empty-grid-item{
+    footer .link-wrapper .empty-grid-item{
         display: none;
     }
 }
