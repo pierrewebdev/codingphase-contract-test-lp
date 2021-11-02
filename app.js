@@ -1,14 +1,26 @@
-const glider = new Glide(".glide", {
-    type: "slider",
-    startAt: 1,
-    perView: 3,
-    focusAt: "center"
-}).mount();
+function createGlider(){
+    const glider = new Glide(".glide", {
+        type: "slider",
+        startAt: 1,
+        perView: 3,
+        breakpoints: {
+            768: {
+                perView: 1,
+                focusAt: "center"
+            }
+        },
+        focusAt: "center"
+    }).mount();
+
+    return glider;
+}
 
 function moveLeft(){
-    glider.go("<");
+    carousel.go("<");
 }
 
 function moveRight(){
-    glider.go(">");
+    carousel.go(">");
 }
+
+const carousel = createGlider();

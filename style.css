@@ -570,8 +570,25 @@ footer .social-icons i{
 }
 
 @media only screen and (max-width: 768px){
+    section{
+        padding: 0px 40px;
+    }
+
+    .hero-section .hero-container{
+        grid-template-columns: auto;
+    }
+
+    .hero-section .hero-container #hero-box-one{
+        display: none;
+    }
+
     .partner-logo-container{
         grid-template-columns: auto auto auto;
+    }
+
+    .benefits-section .icon-box-container{
+        grid-template-columns: auto auto;
+        row-gap: 20px;
     }
 
     .popular-this-week .title-container{
