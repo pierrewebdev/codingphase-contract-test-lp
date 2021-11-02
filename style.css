@@ -868,3 +868,13 @@ footer .social-icons i{
         font-size: 30px;
     }
 }
+
+@media only screen and (max-width: 280px){
+    .hero-section .hero-container #hero-box-two h1{
+        font-size: 25px;
+    }
+
+    img.watch-video{
+        display: none;
+    }
+}
