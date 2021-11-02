@@ -119,17 +119,13 @@ nav .logo{
 }
 
 .hero-container .hero-content .product-features{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
     margin-top: 50px;
 }
 
 .hero-container .hero-content .product-features p.orange-text{
     font-size: 20px;
-}
-
-.hero-section .mobile-product-features{
-    display: none;
 }
 
 /*CSS for partner logos underneath hero image section*/
@@ -425,7 +421,8 @@ nav .logo{
 }
 
 .testimonials-section .slider-container li.glide__slide.glide__slide--active{
-    box-shadow: 4px 4px 11px 4px #e0dfdf;
+    box-shadow: 4px 4px 8px 4px #f0ecec;
+    border-radius: 12px;
 }
 
 .testimonials-section .slider-container ul.glide__slides{
@@ -610,7 +607,7 @@ footer .social-icons i{
         width: 100%;
     }
 
-    .hero-section .hero-container .product-details{
+    .hero-section .hero-container .product-features{
         width: 100%;
     }
 
@@ -646,8 +643,20 @@ footer .social-icons i{
         row-gap: 20px;
     }
 
-    li.glide__slide{
-        margin-left: 20px;
+    .glide__track{
+        overflow: visible !important;
+    }
+
+    li.glide__slide h3::before{
+        visibility: hidden;
+    }
+
+    li.glide__slide.glide__slide--active h3::before{
+        visibility: visible;
+    }
+
+    li.glide__slide p.centered-text{
+        padding: 0 20px;
     }
 
     footer .link-wrapper{
@@ -657,5 +666,123 @@ footer .social-icons i{
 
     footer .link-wrapper .empty-grid-item{
         display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .hero-container .hero-content .hero-title{
+        font-size: 50px;
+    }
+
+    .more-about-kombucha .two-col-layout{
+        grid-template-columns: auto;
+        row-gap: 60px;
+    }
+
+    .more-about-kombucha .two-col-layout h2{
+        font-size: 30px;
+    }
+
+    .more-about-kombucha .two-col-layout #kombucha-item-three{
+        grid-row: 4 / 5;
+    }
+
+    .more-about-kombucha .kombuca-grid-img-container img:first-of-type{
+        height: 250px;
+        width:auto;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-one img.watch-video{
+        left: -80px;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-two img.watch-video {
+        right: -60px;
+    }
+
+    .more-about-kombucha .two-col-layout .kombuca-grid-img-container.image-border-three img.watch-video{
+        left: -80px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    .partner-logo-container{
+        grid-template-columns: auto auto;
+    }
+
+     .popular-this-week .product-card-container .product-card{
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        padding: 40px;
+    }
+
+    .popular-this-week .product-card-container .product-card .card-content{
+        width: auto;
+    }
+
+    .popular-this-week .product-card-container .product-card .card-img-container img{
+        display: none;
+    }
+
+    .stats-section{
+        grid-template-columns: auto;
+    }
+
+    ul.glide__slides{
+        width: 1260px;
+    }
+
+   li.glide__slide{
+        width: 30% !important;
+    }
+
+    .testimonials-section .slider-container li.glide__slide.glide__slide--active{
+        box-shadow: 4px 4px 8px 4px #f0ecec;
+        border-radius: 12px;
+    }
+
+    footer .link-wrapper{
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    footer .link-wrapper .logo-with-icons{
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .hero-container .hero-content .hero-title{
+        font-size: 40px;
+    }
+
+    .hero-container .hero-content .hero-price{
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .hero-container .hero-content .product-features{
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .benefits-section .icon-box-container{
+        grid-template-columns: auto;
+    }
+
+    .popular-this-week .title-container .span-numbers{
+        display: none;
+    }
+
+    h2{
+        font-size: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 391px){
+    section{
+        padding: 0 20px;
     }
 }
