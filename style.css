@@ -878,7 +878,11 @@ footer .social-icons i{
         display: none;
     }
 
-    .stats-section{
+    .stats-section,{
+        padding: 50px 0;
+    }
+
+    footer .link-wrapper{
         padding: 50px 0;
     }
 }
