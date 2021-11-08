@@ -877,4 +877,8 @@ footer .social-icons i{
     img.watch-video{
         display: none;
     }
+
+    .stats-section{
+        padding: 50px 0;
+    }
 }
